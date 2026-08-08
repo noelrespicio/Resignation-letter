@@ -1,136 +1,292 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resignation Letter</title>
+    <title>Formal Resignation Letter</title>
 
-    <style>
+```
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 40px 20px;
+        background: #eef1f5;
+        font-family: "Times New Roman", Times, serif;
+        color: #222;
+    }
+
+    .toolbar {
+        max-width: 850px;
+        margin: 0 auto 20px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .print-btn {
+        border: none;
+        background: #1f2937;
+        color: white;
+        padding: 11px 20px;
+        border-radius: 6px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .print-btn:hover {
+        background: #111827;
+    }
+
+    .paper {
+        width: 100%;
+        max-width: 850px;
+        min-height: 1100px;
+        margin: auto;
+        background: #ffffff;
+        padding: 75px 85px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        position: relative;
+    }
+
+    .top-line {
+        height: 4px;
+        width: 100%;
+        background: #1f2937;
+        margin-bottom: 45px;
+    }
+
+    .header {
+        margin-bottom: 55px;
+    }
+
+    .name {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        margin-bottom: 6px;
+    }
+
+    .contact {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .date {
+        margin-bottom: 38px;
+        font-size: 15px;
+    }
+
+    .recipient {
+        line-height: 1.6;
+        margin-bottom: 35px;
+        font-size: 15px;
+    }
+
+    .subject {
+        font-weight: bold;
+        font-size: 15px;
+        margin-bottom: 28px;
+    }
+
+    .salutation {
+        margin-bottom: 22px;
+        font-size: 15px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 1.9;
+        text-align: justify;
+        margin: 0 0 22px;
+    }
+
+    .closing {
+        margin-top: 38px;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .signature {
+        margin-top: 55px;
+    }
+
+    .signature-name {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 4px;
+    }
+
+    .signature-position {
+        font-size: 14px;
+        color: #555;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 35px;
+        left: 85px;
+        right: 85px;
+        border-top: 1px solid #ddd;
+        padding-top: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        color: #888;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media (max-width: 650px) {
         body {
-            margin: 0;
-            padding: 40px;
-            background: #f2f2f2;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #222;
+            padding: 15px 8px;
         }
 
-        .letter {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 60px 70px;
-            box-sizing: border-box;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        .paper {
+            padding: 45px 30px 80px;
+            min-height: auto;
         }
 
-        .date {
-            margin-bottom: 35px;
+        .header {
+            margin-bottom: 40px;
         }
 
-        .recipient {
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        .subject {
-            font-weight: bold;
-            margin-bottom: 30px;
+        .name {
+            font-size: 21px;
         }
 
         p {
-            font-size: 15px;
-            line-height: 1.8;
-            text-align: justify;
-            margin-bottom: 20px;
-        }
-
-        .closing {
-            margin-top: 35px;
+            font-size: 14px;
             line-height: 1.8;
         }
 
-        .signature {
-            margin-top: 45px;
+        .footer {
+            position: static;
+            margin-top: 60px;
+        }
+    }
+
+    @media print {
+        body {
+            background: white;
+            padding: 0;
         }
 
-        .signature-name {
-            font-weight: bold;
+        .toolbar {
+            display: none;
         }
 
-        @media print {
-            body {
-                background: #fff;
-                padding: 0;
-            }
-
-            .letter {
-                max-width: none;
-                box-shadow: none;
-                padding: 40px;
-            }
+        .paper {
+            max-width: none;
+            min-height: 100vh;
+            box-shadow: none;
+            padding: 60px 70px;
         }
-    </style>
+
+        .footer {
+            left: 70px;
+            right: 70px;
+        }
+    }
+</style>
+```
+
 </head>
 
 <body>
 
-    <div class="letter">
+```
+<div class="toolbar">
+    <button class="print-btn" onclick="window.print()">
+        Print / Save as PDF
+    </button>
+</div>
 
-        <div class="date">
-            August 9, 2026
+<main class="paper">
+
+    <div class="top-line"></div>
+
+    <header class="header">
+        <div class="name">NOEL A. RESPICIO</div>
+        <div class="contact">
+            SARANAY,CABATUAN,ISABELA · 09677718558 · noelrespicio84@gmail.com
         </div>
+    </header>
 
-        <div class="recipient">
-            <strong>[Manager's Name]</strong><br>
-            [Position]<br>
-            [Company Name]<br>
-            [Company Address]
-        </div>
-
-        <div class="subject">
-            Subject: Formal Resignation
-        </div>
-
-        <p>
-            Dear [Manager's Name],
-        </p>
-
-        <p>
-            Please accept this letter as my formal resignation from my position as
-            <strong>[Your Position]</strong> at <strong>[Company Name]</strong>,
-            effective <strong>[Last Working Day]</strong>.
-        </p>
-
-        <p>
-            I am grateful for the opportunity to have been part of the company.
-            I sincerely appreciate the support, guidance, and experience I have
-            gained during my time with the organization. The knowledge and skills
-            I have learned will be valuable to me in my future endeavors.
-        </p>
-
-        <p>
-            I will do my best to complete my remaining responsibilities and assist
-            with the proper turnover of my duties to ensure a smooth transition
-            before my departure.
-        </p>
-
-        <p>
-            Thank you for the opportunity to work with the company. I wish the
-            management and the entire team continued success in the future.
-        </p>
-
-        <div class="closing">
-            Sincerely,
-        </div>
-
-        <div class="signature">
-            <div class="signature-name">[Your Full Name]</div>
-            [Your Position]<br>
-            [Contact Number]
-        </div>
-
+    <div class="date">
+        August 9, 2026
     </div>
+
+    <div class="recipient">
+        <strong>[MANAGER'S FULL NAME]</strong><br>
+        [Manager's Position]<br>
+        [Company Name]<br>
+        [Company Address]
+    </div>
+
+    <div class="subject">
+        Re: Formal Resignation
+    </div>
+
+    <div class="salutation">
+        Dear [Mr./Ms./Mrs. Last Name],
+    </div>
+
+    <p>
+        Please accept this letter as my formal resignation from my position as
+        <strong>Sales Ambassador</strong> at <strong>Executive Genesis INC.</strong>.
+        My last working day will be <strong>August 31,2026</strong>,
+        in accordance with the required notice period.
+    </p>
+
+    <p>
+        I am sincerely grateful for the opportunity to have been part of
+        <strong>Executive Genesis Inc.</strong>. During my time with the company,
+        I have gained valuable experience, knowledge, and professional skills
+        that I will carry with me throughout my career.
+    </p>
+
+    <p>
+        I would also like to express my appreciation for the guidance,
+        support, and trust extended to me by the management and my colleagues.
+        It has been a valuable experience working alongside the team.
+    </p>
+
+    <p>
+        I am committed to making the transition as smooth as possible.
+        I will complete my remaining responsibilities and properly turn over
+        my current tasks and other necessary matters before my last working day.
+    </p>
+
+    <p>
+        Thank you once again for the opportunity to be part of the company.
+        I wish <strong>[Company Name]</strong>, the management, and the entire
+        team continued growth and success in the future.
+    </p>
+
+    <div class="closing">
+        Respectfully yours,
+    </div>
+
+    <div class="signature">
+        <div class="signature-name">NOEL A. RESPICIO</div>
+        <div class="signature-position"> Sales Ambassador</div>
+    </div>
+
+    <div class="footer">
+        <span>Formal Resignation Letter</span>
+        <span>Executive Genesis Inc.</span>
+    </div>
+
+</main>
+```
 
 </body>
 </html>
-
