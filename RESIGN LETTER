@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formal Resignation Letter</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: #f1f3f5;
+            font-family: "Georgia", "Times New Roman", serif;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        .letter {
+            max-width: 850px;
+            margin: auto;
+            background: #ffffff;
+            padding: 70px 80px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            border-top: 6px solid #1f3c5b;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #1f3c5b;
+            font-size: 28px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .header .line {
+            width: 70px;
+            height: 3px;
+            background: #c9a227;
+            margin: 15px auto 0;
+        }
+
+        .date {
+            text-align: right;
+            margin-bottom: 35px;
+            color: #555;
+        }
+
+        .recipient {
+            margin-bottom: 30px;
+        }
+
+        .recipient strong {
+            color: #1f3c5b;
+        }
+
+        .subject {
+            margin: 25px 0;
+            font-weight: bold;
+            color: #1f3c5b;
+        }
+
+        p {
+            margin: 0 0 18px;
+            text-align: justify;
+        }
+
+        .closing {
+            margin-top: 35px;
+        }
+
+        .signature {
+            margin-top: 45px;
+        }
+
+        .signature-line {
+            width: 240px;
+            border-top: 1px solid #555;
+            margin-top: 55px;
+            padding-top: 8px;
+        }
+
+        .footer {
+            margin-top: 55px;
+            padding-top: 18px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .letter {
+                max-width: none;
+                box-shadow: none;
+                border-top: none;
+                padding: 50px 60px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .letter {
+                padding: 40px 25px;
+            }
+
+            .header h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="letter">
+
+        <div class="header">
+            <h1>Resignation Letter</h1>
+            <div class="line"></div>
+        </div>
+
+        <div class="date">
+            [Date]
+        </div>
+
+        <div class="recipient">
+            <strong>[Manager's Name]</strong><br>
+            [Position / Department]<br>
+            [Company Name]<br>
+            [Company Address]
+        </div>
+
+        <div class="subject">
+            Subject: Formal Resignation from [Position]
+        </div>
+
+        <p>
+            Dear [Mr./Ms. Last Name],
+        </p>
+
+        <p>
+            Please accept this letter as my formal resignation from my position as
+            <strong>[Position]</strong> at <strong>[Company Name]</strong>, effective
+            <strong>[Last Working Day]</strong>, in accordance with the required notice period.
+        </p>
+
+        <p>
+            I am sincerely grateful for the opportunity to have been part of the company.
+            During my time here, I have gained valuable knowledge, skills, and professional
+            experience that I will carry with me throughout my career. I also appreciate the
+            support, guidance, and opportunities for growth that I have received from the
+            management and my colleagues.
+        </p>
+
+        <p>
+            This decision was carefully considered, and I believe it is the appropriate step
+            for my professional and personal growth. I am committed to ensuring a smooth
+            transition during my remaining time with the company and will do my best to
+            complete my responsibilities and properly turn over any pending tasks.
+        </p>
+
+        <p>
+            Thank you for the trust and support you have given me during my employment.
+            I genuinely value the experience and relationships I have built here, and I wish
+            the company and the entire team continued success in the future.
+        </p>
+
+        <p class="closing">
+            Thank you for your understanding and consideration.
+        </p>
+
+        <div class="signature">
+            Sincerely,
+
+            <div class="signature-line">
+                <strong>[Your Full Name]</strong><br>
+                [Position]<br>
+                [Employee ID, if applicable]
+            </div>
+        </div>
+
+        <div class="footer">
+            Formal Resignation Letter
+        </div>
+
+    </div>
+
+</body>
+</html>
