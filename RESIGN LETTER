@@ -3,121 +3,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Formal Resignation Letter</title>
 
     <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
         * {
             box-sizing: border-box;
         }
 
         body {
             margin: 0;
-            padding: 40px 20px;
-            background: #f1f3f5;
+            background: #e9ecef;
             font-family: "Georgia", "Times New Roman", serif;
-            color: #222;
-            line-height: 1.7;
+            color: #252525;
         }
 
-        .letter {
-            max-width: 850px;
-            margin: auto;
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 25px auto;
+            padding: 22mm 22mm 18mm;
             background: #ffffff;
-            padding: 70px 80px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-            border-top: 6px solid #1f3c5b;
+            position: relative;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
         }
 
+        /* Decorative top accent */
+        .top-accent {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 7px;
+            background: linear-gradient(
+                90deg,
+                #17324d 0%,
+                #17324d 70%,
+                #c7a44a 70%,
+                #c7a44a 100%
+            );
+        }
+
+        /* Header */
         .header {
-            text-align: center;
-            margin-bottom: 45px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 22px;
+            border-bottom: 1px solid #d9d9d9;
         }
 
-        .header h1 {
-            margin: 0;
-            color: #1f3c5b;
-            font-size: 28px;
-            letter-spacing: 2px;
+        .logo {
+            width: 58px;
+            height: 58px;
+            border: 2px solid #c7a44a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #17324d;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .company-info {
+            text-align: right;
+        }
+
+        .company-name {
+            color: #17324d;
+            font-family: Arial, sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            letter-spacing: 1px;
             text-transform: uppercase;
         }
 
-        .header .line {
-            width: 70px;
-            height: 3px;
-            background: #c9a227;
-            margin: 15px auto 0;
+        .company-details {
+            margin-top: 5px;
+            color: #777;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            line-height: 1.5;
         }
 
+        /* Title */
+        .title-section {
+            text-align: center;
+            margin: 42px 0 38px;
+        }
+
+        .title-section h1 {
+            margin: 0;
+            color: #17324d;
+            font-family: Arial, sans-serif;
+            font-size: 25px;
+            letter-spacing: 3px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .gold-line {
+            width: 65px;
+            height: 3px;
+            background: #c7a44a;
+            margin: 14px auto 0;
+        }
+
+        /* Date */
         .date {
             text-align: right;
-            margin-bottom: 35px;
+            font-size: 13px;
             color: #555;
+            margin-bottom: 35px;
         }
 
+        /* Recipient */
         .recipient {
-            margin-bottom: 30px;
+            font-size: 14px;
+            line-height: 1.65;
+            margin-bottom: 28px;
         }
 
-        .recipient strong {
-            color: #1f3c5b;
-        }
-
-        .subject {
-            margin: 25px 0;
+        .recipient-name {
+            color: #17324d;
             font-weight: bold;
-            color: #1f3c5b;
         }
 
-        p {
+        /* Subject */
+        .subject {
+            background: #f7f8f9;
+            border-left: 4px solid #c7a44a;
+            padding: 12px 16px;
+            margin: 25px 0 30px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+        }
+
+        .subject strong {
+            color: #17324d;
+        }
+
+        /* Letter content */
+        .content {
+            font-size: 14px;
+            line-height: 1.85;
+        }
+
+        .content p {
             margin: 0 0 18px;
             text-align: justify;
         }
 
-        .closing {
-            margin-top: 35px;
+        .salutation {
+            margin-bottom: 20px !important;
         }
 
+        /* Closing */
+        .closing {
+            margin-top: 28px;
+        }
+
+        /* Signature */
         .signature {
-            margin-top: 45px;
+            margin-top: 38px;
+            font-size: 14px;
+        }
+
+        .signature-space {
+            height: 55px;
         }
 
         .signature-line {
-            width: 240px;
-            border-top: 1px solid #555;
-            margin-top: 55px;
+            width: 235px;
+            border-top: 1px solid #333;
             padding-top: 8px;
         }
 
-        .footer {
-            margin-top: 55px;
-            padding-top: 18px;
-            border-top: 1px solid #ddd;
-            text-align: center;
-            font-size: 12px;
-            color: #888;
+        .signature-name {
+            color: #17324d;
+            font-weight: bold;
         }
 
+        .signature-position {
+            color: #666;
+            font-size: 12px;
+            margin-top: 2px;
+        }
+
+        /* Footer */
+        .footer {
+            position: absolute;
+            bottom: 12mm;
+            left: 22mm;
+            right: 22mm;
+            border-top: 1px solid #dedede;
+            padding-top: 9px;
+            display: flex;
+            justify-content: space-between;
+            color: #999;
+            font-family: Arial, sans-serif;
+            font-size: 9px;
+        }
+
+        .footer-right {
+            color: #17324d;
+        }
+
+        /* Print */
         @media print {
             body {
-                background: white;
-                padding: 0;
+                background: #ffffff;
             }
 
-            .letter {
-                max-width: none;
+            .page {
+                margin: 0;
                 box-shadow: none;
-                border-top: none;
-                padding: 50px 60px;
             }
         }
 
-        @media (max-width: 600px) {
-            .letter {
-                padding: 40px 25px;
+        /* Mobile */
+        @media screen and (max-width: 800px) {
+            .page {
+                width: 100%;
+                min-height: 100vh;
+                margin: 0;
+                padding: 35px 25px 90px;
             }
 
-            .header h1 {
-                font-size: 22px;
+            .header {
+                align-items: flex-start;
+            }
+
+            .company-name {
+                font-size: 13px;
+            }
+
+            .company-details {
+                font-size: 9px;
+            }
+
+            .title-section h1 {
+                font-size: 21px;
+            }
+
+            .content {
+                font-size: 13px;
+            }
+
+            .footer {
+                left: 25px;
+                right: 25px;
             }
         }
     </style>
@@ -125,78 +269,163 @@
 
 <body>
 
-    <div class="letter">
+<div class="page">
 
-        <div class="header">
-            <h1>Resignation Letter</h1>
-            <div class="line"></div>
+    <div class="top-accent"></div>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <!-- Replace this with your company logo -->
+        <div class="logo">
+            LOGO
         </div>
 
-        <div class="date">
-            [Date]
+        <div class="company-info">
+            <div class="company-name">
+                [COMPANY NAME]
+            </div>
+
+            <div class="company-details">
+                [Company Address]<br>
+                [City, Province, ZIP Code]<br>
+                [Contact Number] • [Email Address]
+            </div>
         </div>
 
-        <div class="recipient">
-            <strong>[Manager's Name]</strong><br>
-            [Position / Department]<br>
-            [Company Name]<br>
-            [Company Address]
-        </div>
+    </header>
 
-        <div class="subject">
-            Subject: Formal Resignation from [Position]
-        </div>
 
-        <p>
+    <!-- TITLE -->
+    <section class="title-section">
+
+        <h1>Resignation Letter</h1>
+
+        <div class="gold-line"></div>
+
+    </section>
+
+
+    <!-- DATE -->
+    <div class="date">
+        [Month Day, Year]
+    </div>
+
+
+    <!-- RECIPIENT -->
+    <div class="recipient">
+
+        <span class="recipient-name">
+            [Manager's Full Name]
+        </span><br>
+
+        [Manager's Position]<br>
+
+        [Department]<br>
+
+        [Company Name]
+
+    </div>
+
+
+    <!-- SUBJECT -->
+    <div class="subject">
+
+        <strong>Subject:</strong>
+        Formal Resignation from the Position of [Your Position]
+
+    </div>
+
+
+    <!-- LETTER -->
+    <div class="content">
+
+        <p class="salutation">
             Dear [Mr./Ms. Last Name],
         </p>
 
         <p>
             Please accept this letter as my formal resignation from my position as
-            <strong>[Position]</strong> at <strong>[Company Name]</strong>, effective
-            <strong>[Last Working Day]</strong>, in accordance with the required notice period.
+            <strong>[Your Position]</strong> at <strong>[Company Name]</strong>.
+            My intended last working day will be <strong>[Last Working Day]</strong>,
+            in accordance with the applicable notice period and company policy.
         </p>
 
         <p>
-            I am sincerely grateful for the opportunity to have been part of the company.
-            During my time here, I have gained valuable knowledge, skills, and professional
-            experience that I will carry with me throughout my career. I also appreciate the
-            support, guidance, and opportunities for growth that I have received from the
-            management and my colleagues.
+            I would like to express my sincere gratitude for the opportunity to be
+            part of the organization. During my time with the company, I have gained
+            valuable knowledge, professional experience, and skills that have
+            contributed significantly to my personal and career development.
         </p>
 
         <p>
-            This decision was carefully considered, and I believe it is the appropriate step
-            for my professional and personal growth. I am committed to ensuring a smooth
-            transition during my remaining time with the company and will do my best to
-            complete my responsibilities and properly turn over any pending tasks.
+            I am also deeply appreciative of the guidance, support, and trust extended
+            to me by the management and my colleagues. The experiences and professional
+            relationships I have developed during my tenure will remain meaningful to me
+            as I move forward in my career.
         </p>
 
         <p>
-            Thank you for the trust and support you have given me during my employment.
-            I genuinely value the experience and relationships I have built here, and I wish
-            the company and the entire team continued success in the future.
+            This decision has been carefully considered, and I believe it is the right
+            step toward my professional and personal growth. I remain committed to
+            maintaining professionalism throughout my remaining period and will do my
+            best to ensure a smooth and orderly transition. I am willing to assist with
+            the proper turnover of my responsibilities, pending tasks, and other
+            necessary matters.
+        </p>
+
+        <p>
+            Thank you for the opportunities, support, and experiences that I have
+            received during my employment. I sincerely wish <strong>[Company Name]</strong>,
+            the management, and the entire team continued success and prosperity
+            in the years ahead.
         </p>
 
         <p class="closing">
             Thank you for your understanding and consideration.
         </p>
 
-        <div class="signature">
-            Sincerely,
+    </div>
 
-            <div class="signature-line">
-                <strong>[Your Full Name]</strong><br>
-                [Position]<br>
-                [Employee ID, if applicable]
+
+    <!-- SIGNATURE -->
+    <div class="signature">
+
+        Sincerely,
+
+        <div class="signature-space"></div>
+
+        <div class="signature-line">
+
+            <div class="signature-name">
+                [YOUR FULL NAME]
             </div>
-        </div>
 
-        <div class="footer">
-            Formal Resignation Letter
+            <div class="signature-position">
+                [Your Position]<br>
+                Employee ID: [Employee ID]
+            </div>
+
         </div>
 
     </div>
 
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div>
+            Confidential Employment Correspondence
+        </div>
+
+        <div class="footer-right">
+            [COMPANY NAME]
+        </div>
+
+    </footer>
+
+</div>
+
 </body>
 </html>
+
